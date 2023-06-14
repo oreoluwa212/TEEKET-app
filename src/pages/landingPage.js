@@ -24,7 +24,7 @@ function LandingPage() {
           <div className=" w-full flex justify-center items-center mt-12">
             <Link
               className="bg-[#0052F6]	text-white rounded-xl h-[60px] w-[85%] font-bold py-4 text-center "
-              to={"/home"}
+              to={"/login"}
             >
               <button className=""> Create an event</button>
             </Link>

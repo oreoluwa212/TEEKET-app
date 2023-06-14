@@ -1,13 +1,15 @@
 import React from "react";
 import logo from "../img/logo.png";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function nav() {
   return (
     <div className=" container mx-auto max-w-screen-sm my-9 flex flex-row justify-center">
       <div className=" w-[90%] min-[400px]:w-[60%] lg:w-[30%] border-gray-300">
         <div className=" flex-1 mx-0 ">
-          <img src={logo} alt="logo" className=" w-30 h-12" />
+          <Link to={"/"}>
+            <img src={logo} alt="logo" className=" w-30 h-12" />
+          </Link>
         </div>
       </div>
       <div className=" float-none">

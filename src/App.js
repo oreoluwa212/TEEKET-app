@@ -10,6 +10,7 @@ import EventLists from "../src/pages/eventLists";
 import Login from "../src/pages/loginPage";
 import Attendees from '../src/pages/attendeesPage';
 import HomeOrganiser from "../src/pages/homeOrganiser";
+import PageFooter from "../src/components/pagefooter";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/attendees" element={<Attendees />} />
           <Route path="/home" element={<HomeOrganiser />} />
+          <Route path="/footer" element={<PageFooter />} />
 
         </Routes>
       </BrowserRouter>

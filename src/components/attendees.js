@@ -16,7 +16,7 @@ function AttendesPage() {
               <img
                 src={placeholder}
                 alt="Attendees' placeholder"
-                className=" w-[405px] mx-0 ]"
+                className=" w-full  "
               />
             </div>
 
