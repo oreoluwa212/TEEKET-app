@@ -7,6 +7,7 @@ import marketing from '../assets/images/marketing.png';
 import phone from '../assets/images/phone.png';
 import review from '../assets/images/Review.png';
 
+
 function Home() {
   return (
     <div className=" container mx-auto p-4 max-w-screen-sm font-manrope">

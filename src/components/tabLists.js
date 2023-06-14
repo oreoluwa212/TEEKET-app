@@ -140,7 +140,7 @@ function TabLists() {
               );
             })}
 
-            <Link to="/login">
+            <Link to="/attendees">
               <Button1 title={"Discover more"} />
             </Link>
           </div>
@@ -201,7 +201,7 @@ function TabLists() {
                   </div>
                 );
               })}
-              <Link to="/login">
+              <Link to="/attendees">
                 <Button1 title={"Discover more"} />
               </Link>
             </div>

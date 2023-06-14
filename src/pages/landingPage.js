@@ -8,7 +8,7 @@ function LandingPage() {
     <div className=" bg-background m-0 h-screen font-manrope ">
       <div className=" justify-center items-center px-3 flex flex-col w-full h-full backdrop-brightness-10 bg-[#000D26] bg-opacity-40">
         <div className="text-center">
-          <Link to="/sample">
+          <Link to="/">
             {" "}
             <img src={logo} alt="logo" className="mx-auto " />
           </Link>
@@ -24,7 +24,7 @@ function LandingPage() {
           <div className=" w-full flex justify-center items-center mt-12">
             <Link
               className="bg-[#0052F6]	text-white rounded-xl h-[60px] w-[85%] font-bold py-4 text-center "
-              to={"/login"}
+              to={"/organisers"}
             >
               <button className=""> Create an event</button>
             </Link>
@@ -32,7 +32,7 @@ function LandingPage() {
           <div className=" w-full flex justify-center items-center mt-8">
             <Link
               className="bg-white text-[#101010] rounded-xl h-[60px] w-[85%] font-bold py-4 text-center"
-              to={"/login"}
+              to={"/eventLists"}
             >
               <button> Discover event</button>
             </Link>

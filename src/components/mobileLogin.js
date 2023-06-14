@@ -1,75 +1,8 @@
 import google from "../img/google.png";
 import Button from "../components/Button";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { dataBase } from "../firebase.config";
-import {
-  getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
-import { doc, setDoc, getDoc, serverTimestamp } from "firebase/firestore";
-import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function MobileLogin() {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({ email: "", password: "" });
-
-  const { email, password } = formData;
-
-  const onChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.id]: e.target.value,
-    }));
-  };
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const auth = getAuth();
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      const user = userCredential.user;
-      const formDataCopy = { ...formData };
-      delete formDataCopy.password;
-      formDataCopy.timestamp = serverTimestamp();
-
-      await setDoc(doc(dataBase, "users", user.uid), formDataCopy);
-      navigate("/landingpage");
-      toast.success("Login was successful!");
-    } catch (error) {
-      toast.error("Something went wrong");
-    }
-  };
-
-  const onGoogleClick = async () => {
-    try {
-      const auth = getAuth();
-      const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-
-      // check for user
-      const docRef = doc(dataBase, "users", user.uid);
-      const docSnap = await getDoc(docRef);
-      if (!docSnap.exists()) {
-        await setDoc(doc(dataBase, "users", user.uid), {
-          name: user.displayName,
-          email: user.email,
-          timestamp: serverTimestamp(),
-        });
-      }
-      navigate("/landingpage");
-      toast.success("Login was successful!");
-    } catch (error) {
-      toast.error("Could not authorize with Google.");
-    }
-  };
   return (
     <div className="mx-auto w-[90%] min-[400px]:w-[90vw] mt-6 lg:w-[30%] font-manrope ">
       <h2 className=" text-black text-center font-bold py-14  text-[20px]">
@@ -101,12 +34,9 @@ function MobileLogin() {
             className="text-[#8F8F8F] text-base bg-[#EDEDED] block w-full px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F]"
           />
         </form>
-        <Button
-          title={"Continue with email"}
-          onClick={() => {
-            alert("Sign in");
-          }}
-        />
+        <Link to={"/"}>
+          <Button title={"Continue with email"} />
+        </Link>
         <div className="flex justify-center mt-5 w-100%">
           <p className=" text-[#8f8f8f] text-center w-85 ">
             By continuing, you acknowledge that you have read and understand,
