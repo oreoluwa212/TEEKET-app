@@ -29,7 +29,7 @@ function Home() {
           <div>
             <img src={users} className=" w-[100vw] " alt="users" />
           </div>
-          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[980px] mt-14 mb-7 rounded-2xl justify-start ">
+          <div className=" bg-[#D0DBF1] w-[440px] bg-opacity-[40%] h-[980px] mt-14 mb-7 rounded-2xl justify-start ">
             <div className=" mx-4 w-[100vw] justify-center items-center">
               <h1 className=" px-4 pt-3 mb-4 text-[26px] font-manrope text-[#0052F6] font-extrabold">
                 Teeket Features

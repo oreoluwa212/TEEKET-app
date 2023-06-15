@@ -8,7 +8,7 @@ import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
-  //signInWithEmailAndPassword,
+  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 
@@ -30,28 +30,48 @@ function MobileLogin() {
     }));
   };
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const auth = getAuth();
+const onSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const auth = getAuth();
+    const existingUser = await getDoc(doc(dataBase, "users", email));
+
+    if (!existingUser.exists()) {
+      // Create a new account
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
-      const user = userCredential.user;
       const formDataCopy = { ...formData };
       delete formDataCopy.password;
       formDataCopy.timestamp = serverTimestamp();
 
-      await setDoc(doc(dataBase, "users", user.uid), formDataCopy);
+      await setDoc(
+        doc(dataBase, "users", userCredential.user.uid),
+        formDataCopy
+      );
       navigate("/home");
-      toast.success("Login was successful!");
-    } catch (error) {
+      toast.success("Account creation and login were successful!");
+    } else {
+      try {
+        // Sign in the user
+        await signInWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        navigate("/home");
+        toast.success("Login was successful!");
+      } catch (error) {
+        // Handle the error when signing in with existing email
+        toast.error("Invalid credentials. Please try again.");
+      }
+    }
+  } catch (error) {
       toast.error("Something went wrong");
     }
   };
-
   const onGoogleClick = async () => {
     try {
       const auth = getAuth();
@@ -68,9 +88,17 @@ function MobileLogin() {
             name: user.displayName,
             email: user.email,
             timestamp: serverTimestamp(),
+            
           });
         } catch (error) {
           toast.error("Account already exists!");
+        }
+      }else{
+        try {
+          await signInWithEmailAndPassword(auth, user.email, user.password);
+          toast.success("Logged in successfully!");
+        } catch (error) {
+          toast.error("Failed to log in!");
         }
       }
 
