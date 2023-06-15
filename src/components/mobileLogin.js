@@ -45,7 +45,7 @@ function MobileLogin() {
       formDataCopy.timestamp = serverTimestamp();
 
       await setDoc(doc(dataBase, "users", user.uid), formDataCopy);
-      navigate("/landingpage");
+      navigate("/home");
       toast.success("Login was successful!");
     } catch (error) {
       toast.error("Something went wrong");
@@ -69,7 +69,7 @@ function MobileLogin() {
           timestamp: serverTimestamp(),
         });
       }
-      navigate("/");
+      navigate("/home");
       toast.success("Login was successful!");
     } catch (error) {
       toast.error("Could not authorize with Google.");
@@ -104,6 +104,7 @@ function MobileLogin() {
         >
           <input
             type="text"
+            id="email"
             onChange={onChange}
             name="email"
             value={email}
@@ -113,6 +114,7 @@ function MobileLogin() {
           />
           <input
             type="password"
+            id="password"
             onChange={onChange}
             name="password"
             value={password}

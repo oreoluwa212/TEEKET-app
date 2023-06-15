@@ -6,7 +6,7 @@ import Analytics from "../assets/images/Analytics.png";
 import marketing from '../assets/images/marketing.png';
 import phone from '../assets/images/phone.png';
 import review from '../assets/images/Review.png';
-
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -14,7 +14,9 @@ function Home() {
       <div className=" flex justify-center">
         <div className=" w-full max-w-md">
           <div className=" mr-4 flex flex-col ">
-            <img src={placeholder} alt="background" />
+            <Link to={ "/eventLists" }>
+              <img src={placeholder} alt="background" />
+            </Link>
             <h1 className="  font-extrabold text-center text-[25px] mt-7">
               {" "}
               Empowering event creators everywhere{" "}

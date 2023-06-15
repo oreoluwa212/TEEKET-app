@@ -3,7 +3,6 @@ import bg from "../assets/images/CTA.png";
 import chat from "../assets/images/ChatDots.png";
 import call from "../assets/images/PhoneCall.png";
 
-
 function PageFooter() {
   return (
     <div className=" container mx-0 max-w-screen-sm font-manrope">
