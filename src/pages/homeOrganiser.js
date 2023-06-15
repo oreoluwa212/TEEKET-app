@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../components/nav';
 import Home from '../components/organiser';
-import FooterPage from "../assets/images/Footer.png";
+import FooterPage from "../components/pagefooter";
 
 
 function HomeOrganiser() {
