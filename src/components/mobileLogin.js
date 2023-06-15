@@ -59,22 +59,28 @@ function MobileLogin() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      // check for user
-      const docRef = doc(dataBase, "users", user.uid);
+      // Check for user
+      const docRef = doc(database, "users", user.uid);
       const docSnap = await getDoc(docRef);
       if (!docSnap.exists()) {
-        await setDoc(doc(dataBase, "users", user.uid), {
-          name: user.displayName,
-          email: user.email,
-          timestamp: serverTimestamp(),
-        });
+        try {
+          await setDoc(doc(database, "users", user.uid), {
+            name: user.displayName,
+            email: user.email,
+            timestamp: serverTimestamp(),
+          });
+        } catch (error) {
+          toast.error("Account already exists!");
+        }
       }
+
       navigate("/home");
       toast.success("Login was successful!");
     } catch (error) {
       toast.error("Could not authorize with Google.");
     }
   };
+
   return (
     <div className=" mx-auto w-[90%] min-[548px]:w-[60%] lg:w-[30%] font-manrope ">
       <h2 className=" text-black text-center font-bold py-14  text-[20px]">
