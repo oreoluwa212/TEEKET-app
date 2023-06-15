@@ -1,11 +1,11 @@
 import React from "react";
-import placeholder from "../assets/images/hero section.png"; 
+import placeholder from "../assets/images/hero section.png";
 import users from "../assets/images/user.png";
 import ticket from "../assets/images/ticket.png";
 import Analytics from "../assets/images/Analytics.png";
-import marketing from '../assets/images/marketing.png';
-import phone from '../assets/images/phone.png';
-import review from '../assets/images/Review.png';
+import marketing from "../assets/images/marketing.png";
+import phone from "../assets/images/phone.png";
+import review from "../assets/images/Review.png";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -29,7 +29,7 @@ function Home() {
           <div>
             <img src={users} className=" w-[100vw] " alt="users" />
           </div>
-          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[980px] mt-10 mb-7 rounded-2xl w-screen justify-start ">
+          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[980px] mt-10 mb-7 rounded-2xl w-fit justify-start ">
             <div className=" mx-4 w-[100vw] justify-center items-center">
               <h1 className=" px-4 pt-3 mb-4 text-[26px] font-manrope text-[#0052F6] font-extrabold">
                 Teeket Features
