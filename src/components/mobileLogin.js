@@ -76,7 +76,7 @@ function MobileLogin() {
     }
   };
   return (
-    <div className="mx-auto w-[90%] min-[400px]:w-[90vw] mt-6 lg:w-[30%] font-manrope ">
+    <div className=" mx-auto w-[90%] min-[548px]:w-[60%] lg:w-[30%] font-manrope ">
       <h2 className=" text-black text-center font-bold py-14  text-[20px]">
         Log in or sign up to continue
       </h2>
@@ -99,9 +99,7 @@ function MobileLogin() {
         <div className="border w-[48%]"></div>
       </div>
       <div className="">
-        <form
-          className="grid w-full justify-items-center pb-6"
-        >
+        <form className="grid w-full justify-items-center pb-6">
           <input
             type="text"
             id="email"
@@ -122,8 +120,10 @@ function MobileLogin() {
             placeholder="Password"
             className="text-[#8F8F8F] text-base bg-[#EDEDED] block w-full px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F]"
           />
-          <button 
-          onClick={onSubmit} className="text-white bg-[#0052F6] w-full px-4 rounded-xl h-[60px] font-bold text-[16px] mt-5 ">
+          <button
+            onClick={onSubmit}
+            className="text-white bg-[#0052F6] w-full px-4 rounded-xl h-[60px] font-bold text-[16px] mt-5 "
+          >
             Continue with email
           </button>
         </form>

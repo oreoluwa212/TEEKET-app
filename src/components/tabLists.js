@@ -36,7 +36,7 @@ function TabLists() {
 
 
   return (
-    <div className=" container mx-auto p-4 max-w-screen-sm font-manrope">
+    <div className=" mx-auto w-[90%] min-[548px]:w-[60%] lg:w-[30%] container p-4 max-w-screen-sm font-manrope">
       <div className=" flex justify-center">
         <div className="  max-w-sm justify-center">
           <p className="font-manrope mt-16 text-[24px] font-medium">

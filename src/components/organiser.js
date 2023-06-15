@@ -10,11 +10,11 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className=" container mx-auto  max-w-screen-sm font-manrope">
+    <div className="  w-[100%] min-[548px]:w-[60%] lg:w-[30%] container mx-auto  max-w-screen-sm font-manrope">
       <div className=" flex justify-center">
         <div className=" w-full max-w-md">
-          <div className=" mr-4 flex flex-col ">
-            <Link to={ "/eventLists" }>
+          <div className=" flex flex-col ">
+            <Link to={"/eventLists"}>
               <img src={placeholder} alt="background" />
             </Link>
             <h1 className="  font-extrabold text-center text-[25px] mt-7">
@@ -29,9 +29,9 @@ function Home() {
           <div>
             <img src={users} className=" w-[100vw] " alt="users" />
           </div>
-          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[980px] mt-10 mb-7 rounded-2xl w-screen justify-center">
-            <div className=" w-[90vw] justify-center items-center">
-              <h1 className=" mb-6 text-[18px] font-manrope text-[#0052F6] font-extrabold">
+          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[980px] mt-10 mb-7 rounded-2xl w-screen justify-start ">
+            <div className=" mx-4 w-[100vw] justify-center items-center">
+              <h1 className=" px-4 pt-3 mb-4 text-[26px] font-manrope text-[#0052F6] font-extrabold">
                 Teeket Features
               </h1>
               <div className=" flex px-3">
@@ -104,7 +104,7 @@ function Home() {
               Get 30 days free access to promotion by our partners to attract
               more attendees and boost ticket sales for your events.
             </h1>
-            <h1 className="  font-extrabold text-[22px] mt-7">
+            <h1 className="  font-extrabold text-[22px] mx-4 mt-7">
               Don't take our word for it
             </h1>
             <img alt="" className=" " src={review} />
