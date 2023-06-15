@@ -11,7 +11,7 @@ function AttendesPage() {
     <>
       <div className=" container mx-auto min-w-[310px]-sm  font-manrope">
         <div className=" flex justify-center">
-          <div className=" w-full max-w-md ">
+          <div className=" w-full max-w-sm">
             <div className="  flex flex-col justify-center items-center">
               <img
                 src={placeholder}

@@ -10,10 +10,10 @@ import review from '../assets/images/Review.png';
 
 function Home() {
   return (
-    <div className=" container mx-auto p-4 max-w-screen-sm font-manrope">
+    <div className=" container mx-auto  max-w-screen-sm font-manrope">
       <div className=" flex justify-center">
         <div className=" w-full max-w-md">
-          <div className=" flex flex-col justify-center items-center">
+          <div className=" mr-4 flex flex-col ">
             <img src={placeholder} alt="background" />
             <h1 className="  font-extrabold text-center text-[25px] mt-7">
               {" "}
@@ -27,8 +27,8 @@ function Home() {
           <div>
             <img src={users} className=" w-[100vw] " alt="users" />
           </div>
-          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[1055px] my-10 rounded-2xl">
-            <div>
+          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[980px] mt-10 mb-7 rounded-2xl w-screen justify-center">
+            <div className=" w-[90vw] justify-center items-center">
               <h1 className=" mb-6 text-[18px] font-manrope text-[#0052F6] font-extrabold">
                 Teeket Features
               </h1>
@@ -105,7 +105,7 @@ function Home() {
             <h1 className="  font-extrabold text-[22px] mt-7">
               Don't take our word for it
             </h1>
-            <img alt="" className=" " src = { review }/>
+            <img alt="" className=" " src={review} />
           </div>
         </div>
       </div>

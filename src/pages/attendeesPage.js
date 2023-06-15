@@ -2,7 +2,8 @@ import React from "react";
 import Footer from "../components/footer"
 import Nav from "../components/nav";
 import Attendees from '../components/attendees'
-import FooterPage from "../assets/images/Footer.png";
+// import FooterPage from "../assets/images/Footer.png";
+import PageFooter from "../components/pagefooter";
 
 function Login() {
   return (
@@ -10,7 +11,7 @@ function Login() {
       <Nav />
       <Attendees />
       <Footer />
-      <img className=" w-[100vw] my-8" src={FooterPage} alt="Page footer" />
+      <PageFooter/>
     </div>
   );
 }
