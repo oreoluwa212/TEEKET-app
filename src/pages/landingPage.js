@@ -5,8 +5,8 @@ import frame from "../img/Frame.png";
 
 function LandingPage() {
   return (
-    <div className=" mx-auto w-[90%] min-[548px]:w-[60%] lg:w-[30%] bg-background m-0 h-screen font-manrope ">
-      <div className=" justify-center items-center px-3 flex flex-col w-full h-full backdrop-brightness-10 bg-[#000D26] bg-opacity-40">
+    <div className=" mx-auto w-[100%] min-[420px]:w-[60%] lg:w-[50%] bg-background m-0 p-0 h-screen font-manrope ">
+      <div className=" justify-center items-center px-3 flex flex-col w-full h-full backdrop-brightness-10 bg-[#000D26] bg-opacity-[85%]">
         <div className="text-center">
           <Link to="/">
             {" "}

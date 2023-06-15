@@ -5,10 +5,10 @@ import call from "../assets/images/PhoneCall.png";
 
 function PageFooter() {
   return (
-    <div className=" mx-auto w-[100%] min-[548px]:w-[60%] lg:w-[30%] container max-w-screen-md font-manrope">
+    <div className=" mx-auto w-[100%] min-[420px]:w-[60%] lg:w-[50%] container max-w-screen-sm font-manrope">
       <div className=" flex justify-center">
         <div className=" w-full max-w-md mt-7">
-          <div className=" w-[380px] left-0 h-[835px] bg-[#110011] justify-center ">
+          <div className=" w-[420px] left-0 h-[835px] bg-[#110011] justify-center ">
             <div class=" flex flex-col justify-center items-center">
               <img className=" mt-7 px-4 w-full" src={bg} alt="" />
             </div>

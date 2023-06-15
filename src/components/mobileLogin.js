@@ -82,8 +82,8 @@ function MobileLogin() {
   };
 
   return (
-    <div className=" mx-auto w-[90%] min-[548px]:w-[60%] lg:w-[30%] font-manrope ">
-      <h2 className=" text-black text-center font-bold py-14  text-[20px]">
+    <div className=" w-screen min-[548px]:w-[60%] lg:w-[30%] font-manrope ">
+      <h2 className=" text-black text-center font-bold pt-14 pb-8  text-[22px]">
         Log in or sign up to continue
       </h2>
       <div className=" flex justify-center pb-6">
@@ -94,18 +94,21 @@ function MobileLogin() {
             onClick={onGoogleClick}
             alt=" google"
           />
-          <p onClick={onGoogleClick} className=" mt-1 mx-2 font-bold">
+          <p
+            onClick={onGoogleClick}
+            className=" cursor-pointer mt-1 mx-2 text-[18px] font-extrabold"
+          >
             Continue with Google
           </p>
         </button>
       </div>
       <div className="flex justify-center items-center pb-6">
-        <div className="border w-[48%]"></div>
-        <p className="px-3 text-[#8F8F8F]">or</p>
-        <div className="border w-[48%]"></div>
+        <div className=" ml-4 border w-[48%]"></div>
+        <p className=" px-3 text-[#8F8F8F]">or</p>
+        <div className="border mr-4 w-[48%] "></div>
       </div>
-      <div className="">
-        <form className="grid w-full justify-items-center pb-6">
+      <div className=" ml-8 justify-center items-center">
+        <form className="  flex flex-col w-[90%]  pb-6 ">
           <input
             type="text"
             id="email"
@@ -114,7 +117,7 @@ function MobileLogin() {
             value={email}
             autoComplete="On"
             placeholder="Enter your email address"
-            className="text-[#8F8F8F] text-base	mb-6 pb-6 bg-[#EDEDED] block w-full px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F]"
+            className="text-[#8F8F8F] 	mb-6 pb-6 bg-[#EDEDED] block w-full px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F] placeholder-gray-500::placeholder text-lg font-semibold"
           />
           <input
             type="password"
@@ -124,7 +127,7 @@ function MobileLogin() {
             value={password}
             autoComplete="On"
             placeholder="Password"
-            className="text-[#8F8F8F] text-base bg-[#EDEDED] block w-full px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F]"
+            className="text-[#8F8F8F] placeholder-gray-500::placeholder text-lg font-semibold bg-[#EDEDED] block w-full px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F]"
           />
           <button
             onClick={onSubmit}

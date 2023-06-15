@@ -13,15 +13,15 @@ function Home() {
     <div className="  w-[100%] min-[548px]:w-[60%] lg:w-[30%] container mx-auto  max-w-screen-sm font-manrope">
       <div className=" flex justify-center">
         <div className=" w-full max-w-md">
-          <div className=" flex flex-col ">
-            <Link to={"/eventLists"}>
-              <img src={placeholder} alt="background" />
+          <div className=" mt-5 w-[410px] flex flex-col ">
+            <Link to={"/attendees"}>
+              <img src={placeholder} alt="background" className=" w-[420px]" />
             </Link>
-            <h1 className="  font-extrabold text-center text-[25px] mt-7">
+            <h1 className="  font-extrabold text-center text-[26px] mt-9">
               {" "}
               Empowering event creators everywhere{" "}
             </h1>
-            <h2 className=" mt-3 pl-2 my-2 text-center w-[390px] font-extrabold">
+            <h2 className=" mt-4 pl-2 text-[16px] mb-4 text-center  justify-center w-[390px] font-extrabold">
               More than 1 million people across 5 continents choose Teeket
             </h2>
           </div>
@@ -29,7 +29,7 @@ function Home() {
           <div>
             <img src={users} className=" w-[100vw] " alt="users" />
           </div>
-          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[980px] mt-10 mb-7 rounded-2xl justify-start ">
+          <div className=" bg-[#D0DBF1] bg-opacity-[40%] h-[980px] mt-14 mb-7 rounded-2xl justify-start ">
             <div className=" mx-4 w-[100vw] justify-center items-center">
               <h1 className=" px-4 pt-3 mb-4 text-[26px] font-manrope text-[#0052F6] font-extrabold">
                 Teeket Features
