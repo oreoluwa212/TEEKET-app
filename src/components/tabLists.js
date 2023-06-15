@@ -66,7 +66,7 @@ function TabLists() {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-9">
+          <div className="lg:grid-cols-2 lg:gap-8 grid grid-cols-2 md:grid-cols-4 gap-4 mt-9">
             <div className=" w-[164px] h-[84px] bg-[#FBBF0A] rounded-2xl p-4">
               <img src={musicImg} alt="musicImg" className=" block" />
               <button>Music</button>

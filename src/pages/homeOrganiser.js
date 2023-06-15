@@ -9,7 +9,7 @@ function HomeOrganiser() {
       <div>
         <Nav />
         <Home />
-        <img className=" w-[100vw] my-8" src={FooterPage} alt="Page footer" />
+        <FooterPage />
       </div>
     );
 }

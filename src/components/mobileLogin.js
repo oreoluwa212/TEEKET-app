@@ -60,11 +60,11 @@ function MobileLogin() {
       const user = result.user;
 
       // Check for user
-      const docRef = doc(database, "users", user.uid);
+      const docRef = doc(dataBase, "users", user.uid);
       const docSnap = await getDoc(docRef);
       if (!docSnap.exists()) {
         try {
-          await setDoc(doc(database, "users", user.uid), {
+          await setDoc(doc(dataBase, "users", user.uid), {
             name: user.displayName,
             email: user.email,
             timestamp: serverTimestamp(),

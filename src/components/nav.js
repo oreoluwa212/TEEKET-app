@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function nav() {
   return (
-    <div className=" container mx-auto max-w-screen-sm my-9 flex flex-row justify-center">
+    <div className=" w-[90%] min-[548px]:w-[60%] lg:w-[30%]  container mx-auto max-w-screen-sm mt-9 flex flex-row justify-center">
       <div className=" w-[90%] min-[400px]:w-[60%] lg:w-[30%] border-gray-300">
         <div className=" flex-1 mx-0 ">
           <Link to={"/"}>
