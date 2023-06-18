@@ -72,42 +72,29 @@ const onSubmit = async (e) => {
       toast.error("Something went wrong");
     }
   };
-  const onGoogleClick = async () => {
-    try {
-      const auth = getAuth();
-      const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
+const onGoogleClick = async () => {
+  try {
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
 
-      // Check for user
-      const docRef = doc(dataBase, "users", user.uid);
-      const docSnap = await getDoc(docRef);
-      if (!docSnap.exists()) {
-        try {
-          await setDoc(doc(dataBase, "users", user.uid), {
-            name: user.displayName,
-            email: user.email,
-            timestamp: serverTimestamp(),
-            
-          });
-        } catch (error) {
-          toast.error("Account already exists!");
-        }
-      }else{
-        try {
-          await signInWithEmailAndPassword(auth, user.email, user.password);
-          toast.success("Logged in successfully!");
-        } catch (error) {
-          toast.error("Failed to log in!");
-        }
-      }
-
-      navigate("/home");
-      toast.success("Login was successful!");
-    } catch (error) {
-      toast.error("Could not authorize with Google.");
+    // check for user
+    const docRef = doc(dataBase, "users", user.uid);
+    const docSnap = await getDoc(docRef);
+    if (!docSnap.exists()) {
+      await setDoc(doc(dataBase, "users", user.uid), {
+        name: user.displayName,
+        email: user.email,
+        timestamp: serverTimestamp(),
+      });
     }
-  };
+    navigate("/home");
+    toast.success("Login was successful!");
+  } catch (error) {
+    toast.error("Could not authorize with Google.");
+  }
+};
 
   return (
     <div className=" w-screen min-[420px]:w-[60%] lg:w-[30%] font-manrope mx-auto flex justify-center items-center ">
