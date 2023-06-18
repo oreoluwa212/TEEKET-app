@@ -10,7 +10,7 @@ function PageFooter() {
         <div className=" w-full max-w-md mt-7">
           <div className=" w-[420px] left-0 h-[835px] bg-[#110011] justify-center ">
             <div class=" flex flex-col justify-center items-center">
-              <img className=" mt-7 px-4 w-full" src={bg} alt="" />
+              <img className=" mt-4 px-4 w-full" src={bg} alt="" />
             </div>
             <div className=" flex flex-col ">
               <h1 className=" px-6 my-6 font-semibold text-[#989898] ">MENU</h1>
@@ -23,7 +23,7 @@ function PageFooter() {
               <h1 className=" px-6 text-[14px] font-medium text-[#D2D2D2] ">
                 Event FAQs
               </h1>
-              <h1 className=" px-6 py-3 mb-8 text-[14px] font-bold text-[#D2D2D2] ">
+              <h1 className=" px-6 py-3 mb-1 text-[14px] font-bold text-[#D2D2D2] ">
                 For Attendees
               </h1>
             </div>
@@ -33,7 +33,7 @@ function PageFooter() {
                 <img className=" px-1" src={call} alt="" />
                 <p className="p-0 p">09134523456</p>
               </div>
-              <div className="mb-4 mt-3  flex flex-row text-white px-3">
+              <div className=" mt-3  flex flex-row text-white px-3">
                 <img src={chat} alt="" />
                 <p className=" text-[#D2D2D2]">Teeket@support.com</p>
               </div>
@@ -42,8 +42,13 @@ function PageFooter() {
               <p>Privacy Policy</p>
               <p className=" mx-9">Term of Use</p>
             </div>
-            <div className=" mt-4 ml-7 flex text-[#D2D2D2]">
-              &#169;Teeket Inc, All rights reserved{" "}
+            <div className=" mb-5 mt-2 ml-7 flex flex-col text-[#D2D2D2]">
+              &#169;Teeket Inc, All rights reserved
+              <p className=" mt-2">Hertechtrail cohort 6 Capstone project</p>
+              <p className=" mb-4">
+                Designed by{" "}
+                <span className=" text-[17px] font-extrabold">Team 6</span>
+              </p>
             </div>
           </div>
         </div>
