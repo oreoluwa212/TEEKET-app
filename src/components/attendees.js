@@ -9,8 +9,8 @@ import attendeeFooter from "../img/footerAttendee.png";
 function AttendesPage() {
   return (
     <>
-      <div className=" overflow-hidden w-screen lg:mt-[50px] lg:m-0 lg:pt-7 lg:flex lg:flex-col min-[548px]:w-[60%] lg:w-[100vw] container   font-manrope">
-        <div className=" w-full px-6 flex justify-center lg:justify-center">
+      <div className=" w-screen lg:mt-[50px] lg:pt-2 lg:flex lg:flex-col min-[548px]:w-[60%] lg:w-[80vw]  font-manrope">
+        <div className=" w-full px-6 lg:p-0 flex justify-center">
           <div className=" w-full lg:w-full max-w-md lg:text-center">
             <div className=" lg:w-[50vw] lg:pt-9 flex flex-col justify-center items-center">
               <img
@@ -44,7 +44,7 @@ function AttendesPage() {
                 </h4>
               </div>
 
-              <div className=" lg:w-[80vw">
+              <div className=" lg:w-[50vw">
                 <div className=" lg:w-[60vw] lg:text-[30px] lg:mt-18 mt-12 text-[24px] h-[32px] font-manrope">
                   <h1 className=" text-[28px] lg:text-[34px] font-extrabold  ">
                     Trending Events

@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 
 function PageFooter() {
   return (
-    <div className=" w-screen font-manrope mt-6 pb-10 flex flex-col lg:flex lg:mt-[150px] items-center justify-items-center justify-center lg:w-screen lg:pb-0">
-      <div className=" lg:w-full  bg-[#110011] justify-center w-full">
-        <div class=" lg:flex-row lg:justify-items-center lg:items-center lg:gap-10 text-center pt-10 justify-center ">
+    <div className=" font-manrope mt-6 pb-10 flex flex-col lg:flex  items-center justify-items-center lg:mt-0 justify-center lg:pb-7">
+      <div className="  bg-[#660566] justify-center w-full">
+        <div class=" lg:flex-row lg:justify-items-center lg:items-center lg:gap-10 text-center pt-10 lg:pt-0 justify-center ">
           <div className=" lg:h-[500px] h-[400px] relative items-center justify-items-center justify-center">
             <div className=" flex  text-white absolute top-0 left-0 overlay ">
               <div className=" items-center justify-center justify-items-center lg:h-[500px] bg-gradient-to-bl from-[#D71A4E] to-[#0153F7] opacity-100 w-[343px] h-[400px] rounded-xl max-[420px]:w-full max-[420px]:flex-col max-[420px]:items-start max-[420px]:mx-7 lg:w-[100vw]">

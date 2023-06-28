@@ -98,7 +98,7 @@ const onGoogleClick = async () => {
 };
 
   return (
-    <div className=" overflow-hidden lg:w-full lg:h-[30vw] lg:pt-10 container font-manrope mx-auto flex max-[420px]:justify-center max-[420px]:mx-5 justify-center text-center mb-6 lg:mt-[50px]">
+    <div className=" overflow-hidden lg:w-full lg:h-[30vw] lg:pt-10 container font-manrope mx-auto flex max-[420px]:justify-center max-[420px]:mx-5 justify-center text-center mb-6 lg:mt-[10px]">
       <div className=" lg:w-[100%]">
         <h2 className=" text-black text-center font-bold mt-7 mr-5 lg:pt-2 pb-8  text-[23px] lg:text-[32px]">
           Log in or sign up to continue
@@ -127,8 +127,8 @@ const onGoogleClick = async () => {
           <p className=" px-3 text-[#8F8F8F]">or</p>
           <div className=" mr-9 border w-[48%] lg:w-[28%]"></div>
         </div>
-        <div className=" max-[420px]:mx-4 justify-center items-center">
-          <form className="  flex flex-col w-[100%] lg:justify-center lg:items-center max-[420px]:justify-center max-[420px]:justify-items-center">
+        <div className=" max-[420px]:mx-4 justify-center items-center lg:mb-[40px]">
+          <form className="  flex flex-col w-[100%] lg:justify-center lg:items-center max-[420px]:justify-center max-[420px]:justify-items-center lg:mb-[40px]">
             <input
               type="text"
               id="email"
@@ -151,12 +151,12 @@ const onGoogleClick = async () => {
             />
             <button
               onClick={onSubmit}
-              className="text-white bg-[#0052F6]	mb-6 pb-6 block  px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500  font-semibold  lg:rounded-[10px] lg:pt-6 lg:text-[23px] lg:w-[50%] lg:h-[80px]   h-[60px] w-[85%] "
+              className="text-white bg-[#0052F6]	mb-6 pb-6 block  px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500  font-semibold  lg:rounded-[10px] lg:pt-6 lg:text-[23px] lg:w-[50%] lg:mb-0 lg:h-[80px]   h-[60px] w-[85%] "
             >
               Continue with email
             </button>
           </form>
-          <div className="flex justify-center mt-5 w-100% lg:w-[100%]">
+          <div className="flex justify-center mt-5 w-100% lg:w-[80vw] lg:mt-0 lg:mb-3">
             <p className=" lg:text-[22px] mr-3 text-[#8f8f8f] text-center w-85 ">
               By continuing, you acknowledge that you have read and understand,
               and agree to Teeket's{" "}
@@ -164,7 +164,7 @@ const onGoogleClick = async () => {
                 Terms of Service
               </span>{" "}
               and{" "}
-              <span className=" font-extrabold underline text-[#000000]">
+              <span className=" font-extrabold underline text-[#000000] ">
                 Privacy Policy
               </span>
               .
