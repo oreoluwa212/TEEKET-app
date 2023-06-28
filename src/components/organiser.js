@@ -13,7 +13,7 @@ function Home() {
     <div className=" lg:pt-10 lg:w-[1000px] max-[420px]:w-[60%] container font-manrope">
       <div className=" flex justify-center">
         <div className=" w-full max-w-md lg:w-screen  lg:text-center">
-          <div className=" lg:justify-center lg:items-center w-[410px] lg:w-[80vw] lg:mt-[50px] flex flex-col ">
+          <div className=" lg:justify-center lg:items-center w-[410px] lg:w-[80vw] lg:mt-[70px] px-5 mt-6 flex flex-col ">
             <Link to={"/attendees"}>
               <img
                 src={placeholder}

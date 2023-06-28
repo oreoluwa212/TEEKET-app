@@ -98,7 +98,7 @@ const onGoogleClick = async () => {
 };
 
   return (
-    <div className="  lg:w-full lg:h-[30vw] lg:pt-10 container font-manrope mx-auto flex max-[420px]:justify-center max-[420px]:mx-5 justify-center text-center mb-6 lg:mt-[50px]">
+    <div className=" overflow-hidden lg:w-full lg:h-[30vw] lg:pt-10 container font-manrope mx-auto flex max-[420px]:justify-center max-[420px]:mx-5 justify-center text-center mb-6 lg:mt-[50px]">
       <div className=" lg:w-[100%]">
         <h2 className=" text-black text-center font-bold mt-7 mr-5 lg:pt-2 pb-8  text-[23px] lg:text-[32px]">
           Log in or sign up to continue

@@ -32,8 +32,8 @@ function TabLists() {
     setSearchResults(events, sports);
   };
   return (
-    <div className=" mx-auto w-[90%] min-[548px]:w-[60%] lg:w-[100vw] container p-4 lg:p-0 max-w-screen-sm font-manrope lg:mt-[50px]">
-      <div className=" flex justify-center lg:justify-start lg:flex lg:flex-col lg:w-full">
+    <div className=" overflow-hidden w-screen mx-auto  min-[548px]:w-[60%] lg:w-[100vw] container p-4 lg:p-0 font-manrope lg:mt-[50px]">
+      <div className=" flex justify-center w-full px-6 lg:justify-start lg:flex lg:flex-col lg:w-full">
         <div className=" lg:w- max-w-sm justify-center lg:justify-start">
           <div className=" lg:flex lg:flex-col lg:mt-10">
             <p className=" lg:mt-16 font-manrope mt-16 text-[22px] lg:text-[32px]  font-medium">

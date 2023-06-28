@@ -9,8 +9,8 @@ import attendeeFooter from "../img/footerAttendee.png";
 function AttendesPage() {
   return (
     <>
-      <div className=" lg:mt-[50px] lg:m-0 lg:pt-7 lg:flex lg:flex-col w-[90%] min-[548px]:w-[60%] lg:w-[100vw] container mx-auto min-w-[310px]-sm  font-manrope">
-        <div className=" flex justify-center lg:justify-center">
+      <div className=" overflow-hidden w-screen lg:mt-[50px] lg:m-0 lg:pt-7 lg:flex lg:flex-col min-[548px]:w-[60%] lg:w-[100vw] container   font-manrope">
+        <div className=" w-full px-6 flex justify-center lg:justify-center">
           <div className=" w-full lg:w-full max-w-md lg:text-center">
             <div className=" lg:w-[50vw] lg:pt-9 flex flex-col justify-center items-center">
               <img
