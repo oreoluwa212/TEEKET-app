@@ -65,13 +65,14 @@ const onSubmit = async (e) => {
         toast.success("Login was successful!");
       } catch (error) {
         // Handle the error when signing in with existing email
-        toast.error("Invalid credentials. Please try again.");
+        toast.error("Account exists already.");
       }
     }
   } catch (error) {
       toast.error("Something went wrong");
     }
   };
+
 const onGoogleClick = async () => {
   try {
     const auth = getAuth();
@@ -92,39 +93,42 @@ const onGoogleClick = async () => {
     navigate("/home");
     toast.success("Login was successful!");
   } catch (error) {
-    toast.error("Could not authorize with Google.");
+   toast.error("Could not authorize with Google.");
   }
 };
 
   return (
-    <div className=" w-screen min-[420px]:w-[60%] lg:w-[30%] font-manrope mx-auto flex justify-center items-center ">
-      <div className="justify-center w-[420px]">
-        <h2 className=" text-black text-center font-bold pt-14 pb-8  text-[22px]">
+    <div className="  lg:w-full lg:h-[30vw] lg:pt-10 container font-manrope mx-auto flex max-[420px]:justify-center max-[420px]:mx-5 justify-center text-center mb-6 lg:mt-[50px]">
+      <div className=" lg:w-[100%]">
+        <h2 className=" text-black text-center font-bold mt-7 mr-5 lg:pt-2 pb-8  text-[23px] lg:text-[32px]">
           Log in or sign up to continue
         </h2>
-        <div className=" flex justify-center pb-6">
-          <button className=" flex px-20 w-full border-none rounded-xl justify-center items-center">
+        <div className=" flex justify-center mb-6">
+          <button
+            onClick={onGoogleClick}
+            className=" cursor-pointer flex w-full border-none justify-center items-center lg:w-[70%]"
+          >
             <img
-              className=""
-              src={google}
+              className=" lg w-8"
               onClick={onGoogleClick}
+              src={google}
               alt=" google"
             />
             <p
               onClick={onGoogleClick}
-              className=" cursor-pointer mt-1 mx-2 text-[18px] font-extrabold"
+              className=" cursor-pointer mx-2 text-[19px] font-extrabold lg:text-[28px] text-center justify-center"
             >
               Continue with Google
             </p>
           </button>
         </div>
         <div className="flex justify-center items-center pb-6">
-          <div className=" ml-4 border w-[48%]"></div>
+          <div className=" border w-[48%] lg:w-[28%]"></div>
           <p className=" px-3 text-[#8F8F8F]">or</p>
-          <div className="border mr-4 w-[48%] "></div>
+          <div className=" mr-9 border w-[48%] lg:w-[28%]"></div>
         </div>
-        <div className=" ml-8 justify-center items-center">
-          <form className="  flex flex-col w-[90%]  pb-6 ">
+        <div className=" max-[420px]:mx-4 justify-center items-center">
+          <form className="  flex flex-col w-[100%] lg:justify-center lg:items-center max-[420px]:justify-center max-[420px]:justify-items-center">
             <input
               type="text"
               id="email"
@@ -133,7 +137,7 @@ const onGoogleClick = async () => {
               value={email}
               autoComplete="On"
               placeholder="Enter your email address"
-              className="text-[#8F8F8F] 	mb-6 pb-6 bg-[#EDEDED] block w-full px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F] placeholder-gray-500::placeholder text-lg font-semibold"
+              className="text-[#8F8F8F] 	mb-6 pb-6 bg-[#EDEDED] block  px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F] placeholder-gray-500::placeholder text-lg font-semibold  lg:rounded-[15px] lg:pt-6 lg:text-[23px] lg:w-[50%] lg:h-[80px] h-[60px] w-[85%] "
             />
             <input
               type="password"
@@ -143,36 +147,24 @@ const onGoogleClick = async () => {
               value={password}
               autoComplete="On"
               placeholder="Password"
-              className="text-[#8F8F8F] placeholder-gray-500::placeholder text-lg font-semibold bg-[#EDEDED] block w-full px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F]"
+              className="text-[#8F8F8F] 	mb-6 pb-6 bg-[#EDEDED] block  px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500 placeholder:text-[#8F8F8F] placeholder-gray-500::placeholder text-lg font-semibold  lg:rounded-[15px] lg:pt-6 lg:text-[23px] lg:w-[50%] lg:h-[80px]   h-[60px] w-[85%] "
             />
             <button
               onClick={onSubmit}
-              className="text-white bg-[#0052F6] w-full px-4 rounded-xl h-[60px] font-bold text-[16px] mt-5 "
+              className="text-white bg-[#0052F6]	mb-6 pb-6 block  px-6 py-5 rounded-xl focus:outline-none focus:border-sky-500  font-semibold  lg:rounded-[10px] lg:pt-6 lg:text-[23px] lg:w-[50%] lg:h-[80px]   h-[60px] w-[85%] "
             >
               Continue with email
             </button>
           </form>
-          <div className="flex justify-center mt-5 w-100%">
-            <p className=" text-[#8f8f8f] text-center w-85 ">
+          <div className="flex justify-center mt-5 w-100% lg:w-[100%]">
+            <p className=" lg:text-[22px] mr-3 text-[#8f8f8f] text-center w-85 ">
               By continuing, you acknowledge that you have read and understand,
               and agree to Teeket's{" "}
-              <span
-                style={{
-                  fontWeight: "700",
-                  textDecoration: "underline",
-                  color: "#101010",
-                }}
-              >
+              <span className=" font-extrabold underline text-[#101010]">
                 Terms of Service
               </span>{" "}
               and{" "}
-              <span
-                style={{
-                  fontWeight: "700",
-                  textDecoration: "underline",
-                  color: "#101010",
-                }}
-              >
+              <span className=" font-extrabold underline text-[#000000]">
                 Privacy Policy
               </span>
               .

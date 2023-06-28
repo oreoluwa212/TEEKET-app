@@ -6,6 +6,7 @@ import Attendees from '../components/attendees'
 import PageFooter from "../components/pagefooter";
 
 function Login() {
+
   return (
     <div>
       <Nav />

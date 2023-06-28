@@ -6,7 +6,7 @@ import PageFooter from "../components/pagefooter";
 
 function Login() {
   return (
-    <div>
+    <div className="mt-0 w-screen flex flex-col gap-6">
       <Nav />
       <MobileLogin />
       <PageFooter/>
